@@ -1,0 +1,93 @@
+/* FONT IMPORTS — MUST BE AT THE VERY TOP */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  /* ─── Color System ─── */
+  --color-cream: #FAF9F6;
+  --color-cream-dark: #F0EDE8;
+  --color-dark: #0D0D0D;
+  --color-dark-card: #181818;
+  --color-dark-elevated: #1E1E1E;
+  --color-dark-subtle: #252525;
+
+  --color-accent: #00E887;
+  --color-accent-light: #5DF6B4;
+  --color-accent-glow: rgba(0, 232, 135, 0.20);
+
+  --color-text-primary: #111111;
+  --color-text-secondary: #5F6368;
+  --color-text-tertiary: #9AA0A6;
+  --color-text-inverse: #FAFAFA;
+  --color-text-inverse-secondary: rgba(255, 255, 255, 0.60);
+
+  --color-border-light: rgba(0, 0, 0, 0.06);
+  --color-border-dark: rgba(255, 255, 255, 0.08);
+  --color-border-dark-elevated: rgba(255, 255, 255, 0.12);
+
+  --color-surface-light: rgba(0, 0, 0, 0.03);
+  --color-surface-dark: rgba(255, 255, 255, 0.04);
+
+  /* ─── Typography ─── */
+  --font-sans: 'Inter', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+/* ─── Base ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background-color: var(--color-cream);
+  }
+  ::selection {
+    background-color: rgba(0, 232, 135, 0.18);
+  }
+}
+
+/* ─── Utilities ─── */
+@utility animate-marquee {
+  animation: marquee 80s linear infinite;
+}
+
+@utility gradient-accent {
+  background: linear-gradient(135deg, #00E887 0%, #5DF6B4 100%);
+}
+
+@utility gradient-dark-card {
+  background: linear-gradient(180deg, #181818 0%, #0D0D0D 100%);
+}
+
+@utility gradient-glow {
+  background: radial-gradient(circle, rgba(0, 232, 135, 0.20), transparent 70%);
+}
+
+@utility text-gradient-accent {
+  background: linear-gradient(135deg, #00E887 0%, #5DF6B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── Custom Scrollbar ─── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
