@@ -16,6 +16,7 @@ import {
 import { CountdownTimer } from './components/CountdownTimer'
 import { StackedFeed } from './components/StackedFeed'
 import { ThankYouModal } from './components/ThankYouModal'
+import { ImageMarquee } from './components/ImageMarquee'
 
 /* ────────────────────────────────────────────────────── */
 /*  Constants                                             */
@@ -813,32 +814,14 @@ export default function App() {
               </motion.div>
             </div>
 
-            {/* ── Transparency strip ── */}
-            <div className="flex flex-wrap justify-center gap-6 mt-12">
-              {[
-                { icon: Shield, text: '100% Transparent', sub: 'Every naira accounted for' },
-                { icon: Clock, text: 'Time-Sensitive', sub: '8-day medical window' },
-                { icon: Heart, text: 'Direct Impact', sub: 'Funds go straight to Logo' },
-              ].map(f => (
-                <div
-                  key={f.text}
-                  className="flex items-center gap-3 px-5 py-3.5 rounded-xl"
-                  style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
-                >
-                  <f.icon size={14} style={{ color: '#00E887', flexShrink: 0 }} />
-                  <div>
-                    <div className="text-white" style={{ fontSize: '13px', fontWeight: 600 }}>
-                      {f.text}
-                    </div>
-                    <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.38)' }}>
-                      {f.sub}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </section>
+
+        {/* ═══════════════════════════════════════════════ */}
+        {/*  IMAGE MARQUEE — mobile only                    */}
+        {/* ═══════════════════════════════════════════════ */}
+        <ImageMarquee />
 
         {/* ═══════════════════════════════════════════════ */}
         {/*  STORY — Sticky-left editorial, chapters       */}

@@ -81,6 +81,11 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes img-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
 /* ─── Custom Scrollbar ─── */
 .custom-scrollbar::-webkit-scrollbar { width: 4px; }
 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
