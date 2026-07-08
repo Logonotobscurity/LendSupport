@@ -87,6 +87,8 @@ const donations: {
   fund: Fund
   time: string
 }[] = [
+  { donor: 'Dr Olaniyan', amount: '₦200,000', fund: 'Housing', time: 'Just now' },
+  { donor: 'Frande', amount: '₦25,000', fund: 'Housing', time: '1 min ago' },
   { donor: 'Anonymous', amount: '₦25,000', fund: 'Housing', time: '2 min ago' },
   { donor: 'Sarah M.', amount: '₦50,000', fund: 'Housing', time: '5 min ago' },
   { donor: 'Daniel U.', amount: '$40', fund: 'UK Medical', time: '9 min ago' },

@@ -323,9 +323,9 @@ export default function App() {
                   style={{ borderColor: 'rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)' }}
                 >
                   {[
-                    { value: '₦350K+', label: 'Housing raised', accent: true },
+                    { value: '₦675K+', label: 'Housing raised', accent: true },
                     { value: '$450', label: 'Medical raised', accent: false },
-                    { value: '47', label: 'Supporters', accent: false },
+                    { value: '49', label: 'Supporters', accent: false },
                   ].map((k, i) => (
                     <div
                       key={k.label}
@@ -452,7 +452,7 @@ export default function App() {
                         Total Raised
                       </div>
                       <div className="font-bold text-white font-mono" style={{ fontSize: '22px', lineHeight: '26px' }}>
-                        ₦350,000+
+                        ₦675,000+
                       </div>
                     </div>
                     <div className="text-right">
@@ -460,7 +460,7 @@ export default function App() {
                         Supporters
                       </div>
                       <div className="font-bold text-white font-mono" style={{ fontSize: '22px', lineHeight: '26px' }}>
-                        47
+                        49
                       </div>
                     </div>
                     <div
@@ -646,9 +646,9 @@ export default function App() {
                 {/* KPIs */}
                 <div className="flex gap-4 mb-6">
                   {[
-                    { label: 'Raised', value: '₦350,000', accent: true },
+                    { label: 'Raised', value: '₦675,000', accent: true },
                     { label: 'Goal', value: '₦750,000', accent: false },
-                    { label: 'Progress', value: '46%', accent: false },
+                    { label: 'Progress', value: '90%', accent: false },
                   ].map(k => (
                     <div key={k.label} className="flex-1">
                       <div style={{ fontSize: '11px', fontWeight: 600, color: 'rgba(255,255,255,0.30)', letterSpacing: '0.6px', textTransform: 'uppercase', marginBottom: '4px' }}>
@@ -669,7 +669,7 @@ export default function App() {
                   <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.07)' }}>
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: '46%' }}
+                      whileInView={{ width: '90%' }}
                       viewport={{ once: true }}
                       transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                       className="h-full rounded-full gradient-accent"
@@ -677,7 +677,7 @@ export default function App() {
                   </div>
                 </div>
                 <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.30)', marginBottom: '20px' }}>
-                  ₦400,000 still needed for roof, repairs & survival
+                  Only ₦75,000 left — almost there!
                 </div>
 
                 <a
